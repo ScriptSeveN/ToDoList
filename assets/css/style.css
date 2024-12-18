@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+:root {
+  --primary-color: linear-gradient(135deg, #000000, #0d1b2a);;
+  --primary-color-darker: rgb(9, 48, 56);
+  --check-color: #32CD32; /* Verde vibrante (LimeGreen) */
+  --check-text-color: #F0FFF0; /* Cor da letra (Honeydew), suave e contrastante */
+}
+
+* {
+  box-sizing: border-box;
+  outline: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--primary-color);
+  font-family: 'Open sans', sans-serif;
+  font-size: 1.3em;
+  line-height: 1.5em;
+}
+
+.container {
+  max-width: 690px;
+  margin: 50px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+}
+.container h1 {
+  text-align: center;
+}
+
+form input, form label, form button {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+form input {
+  font-size: 24px;
+  height: 50px;
+  padding: 0 20px;
+}
+
+form input:focus {
+  outline: 1px solid var(--primary-color);
+}
+
+form button {
+  border: none;
+  background: var(--primary-color);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  height: 50px;
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+form button:hover {
+  background: var(--primary-color-darker);
+}
+
+.input-task {
+  width: calc(80% - 110px);
+  padding: 10px 15px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.input-task:focus {
+  border-color: #4caf50;
+}
+
+/* Botão de adicionar tarefa */
+.btn-task {
+  padding: 10px 20px;
+  margin-left: 10px;
+  background: #4caf50;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-task:hover {
+  background: #45a049;
+}
+
+/* Lista de tarefas */
+.tasks {
+  list-style: none;
+  margin-top: 20px;
+  padding: 0;
+}
+
+.tasks li {
+  background: #f9f9f9;
+  margin-bottom: 10px;
+  padding: 12px 15px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.li-check {
+  background: var(--check-color) !important;
+  color: var(--check-text-color) !important;
+  border-radius: 10px;
+}
+
+.li-list {
+  color: #090909;
+}
+
+.tasks li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Botão para remover tarefa dentro de li */
+.tasks li button {
+  background: #ff5252;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s ease;
+ margin-left: 10px;
+}
+
+.tasks li button:hover {
+  background: #ff3333;
+}
+
+/* Botão de editar */
+.tasks li .btn-edit {
+    background: #2196f3;
+    color: #fff;
+}
+
+.tasks li .btn-edit:hover {
+    background: #1976d2;
+}
